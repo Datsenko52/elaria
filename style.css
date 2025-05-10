@@ -1,115 +1,49 @@
 
-body {
-  margin: 0;
-  font-family: 'Georgia', serif;
-  background: #0d0d1a;
-  color: #f8f8f8;
-  line-height: 1.6;
-  overflow-x: hidden;
-}
-
-.header {
-  background: linear-gradient(90deg, #221144, #442277);
-  padding: 20px;
+body.quest {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(#111, #333);
+  color: #eee;
   text-align: center;
-  animation: fadeIn 2s ease;
+  padding: 20px;
 }
 
-.header h1 {
-  margin: 0;
-  color: #fff;
-  font-size: 2rem;
+header h1 {
+  font-size: 2em;
+  margin-bottom: 0.2em;
+  color: #80ffd4;
 }
 
-nav ul {
+.scene img {
+  max-width: 90%;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,255,200,0.4);
+  margin: 20px auto;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.choices {
   list-style: none;
   padding: 0;
-  display: flex;
-  justify-content: center;
-  gap: 30px;
 }
 
-nav ul li a {
-  text-decoration: none;
-  color: #d1c4e9;
-  font-weight: bold;
-  transition: color 0.3s;
-}
-
-nav ul li a:hover {
-  color: #ffd700;
-}
-
-.hero {
-  padding: 60px 20px;
-  text-align: center;
-  background: url('assets/bg.jpg') no-repeat center/cover;
-  animation: slideIn 2s ease;
-}
-
-.hero h2 {
-  font-size: 2.5rem;
-  color: #fff;
-}
-
-.hero p {
-  max-width: 600px;
-  margin: auto;
-  font-size: 1.2rem;
-}
-
-.button {
+.choices li a {
   display: inline-block;
-  margin-top: 20px;
-  padding: 12px 30px;
-  background: #8e44ad;
-  color: white;
+  padding: 10px 20px;
+  margin: 10px;
+  color: #fff;
+  background: #444;
+  border-radius: 8px;
   text-decoration: none;
-  border-radius: 30px;
-  transition: background 0.3s;
+  transition: background 0.3s, transform 0.3s;
 }
 
-.button:hover {
-  background: #a569bd;
-}
-
-.map img, .grid img {
-  max-width: 100%;
-  border-radius: 12px;
-  transition: transform 0.3s ease;
-}
-
-.map img:hover, .grid img:hover {
+.choices li a:hover {
+  background: #80ffd4;
+  color: #000;
   transform: scale(1.05);
 }
 
-.grid {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  padding: 40px;
-}
-
-.grid article {
-  max-width: 250px;
-  text-align: center;
-}
-
-footer {
-  text-align: center;
-  padding: 20px;
-  background: #111;
-  font-size: 0.9rem;
-  color: #aaa;
-}
-
-/* Анімації */
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-20px); }
+  from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes slideIn {
-  from { opacity: 0; transform: translateX(-30px); }
-  to { opacity: 1; transform: translateX(0); }
 }
